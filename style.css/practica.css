@@ -73,7 +73,8 @@ section {
     line-height: 1.6;
 }
 
-button {
+button,
+.choice-button {
     cursor: pointer;
     border: 0;
     border-radius: 12px;
@@ -84,9 +85,69 @@ button {
     transition: transform 0.15s ease, background 0.15s ease;
 }
 
-button:hover {
+button:hover,
+.choice-button:hover {
     transform: translateY(-1px);
     background: #63965b;
+}
+
+.choice-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+}
+
+.choice-button span {
+    display: inline-block;
+}
+
+.choice-input {
+    display: none;
+}
+
+.choice-input:checked + span {
+    color: #fefce8;
+}
+
+.details-toggle {
+    display: block;
+    margin-top: 12px;
+}
+
+.details-toggle summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #315a2c;
+    list-style: none;
+}
+
+.details-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.fact-panels .fact-box {
+    display: none;
+}
+
+.fact-selector:has(.choice-input[value="vertebrado"]:checked) ~ .fact-panels .fact-box[data-group="vertebrado"],
+.fact-selector:has(.choice-input[value="invertebrado"]:checked) ~ .fact-panels .fact-box[data-group="invertebrado"] {
+    display: block;
+}
+
+.quiz-result {
+    margin-top: 16px;
+}
+
+.quiz-result .feedback {
+    display: none;
+    margin: 0;
+}
+
+.quiz-selector:has(.choice-input[value="correct"]:checked) ~ .quiz-result .feedback-correct,
+.quiz-selector:has(.choice-input[value="wrong"]:checked) ~ .quiz-result .feedback-wrong {
+    display: block;
 }
 
 .page-image {
