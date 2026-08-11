@@ -30,17 +30,19 @@
                 <p>En este proyecto verás las características, ejemplos,
                     comparaciones y una sección interactiva con datos
                     interesantes.</p>
-                <button onclick="toggleSection('intro-examples')">Mostrar
-                    ejemplos rápidos</button>
-                <div id="intro-examples" class="info-box hidden">
-                    <h3>Ejemplos rápidos</h3>
-                    <ul>
-                        <li><strong>Vertebrados:</strong> mamíferos, aves,
-                            peces, anfibios y reptiles.</li>
-                        <li><strong>Invertebrados:</strong> insectos, aracnidos,
-                            moluscos, crustáceos y gusanos.</li>
-                    </ul>
-                </div>
+                <details class="details-toggle">
+                    <summary>Mostrar ejemplos rápidos</summary>
+                    <div class="info-box">
+                        <h3>Ejemplos rápidos</h3>
+                        <ul>
+                            <li><strong>Vertebrados:</strong> mamíferos, aves,
+                                peces, anfibios y reptiles.</li>
+                            <li><strong>Invertebrados:</strong> insectos,
+                                aracnidos,
+                                moluscos, crustáceos y gusanos.</li>
+                        </ul>
+                    </div>
+                </details>
             </section>
 
             <section class="comparison">
@@ -87,20 +89,30 @@
                 <h2>Sección interactiva</h2>
                 <p>Elige un botón para leer un dato interesante sobre cada
                     grupo.</p>
-                <div class="button-grid">
-                    <button onclick="showFact('fact-vertebrado')">Dato sobre
-                        vertebrados</button>
-                    <button onclick="showFact('fact-invertebrado')">Dato sobre
-                        invertebrados</button>
+                <div class="button-grid fact-selector">
+                    <label class="choice-button">
+                        <input type="radio" name="fact-group" value="vertebrado"
+                            class="choice-input" checked>
+                        <span>Dato sobre vertebrados</span>
+                    </label>
+                    <label class="choice-button">
+                        <input type="radio" name="fact-group"
+                            value="invertebrado" class="choice-input">
+                        <span>Dato sobre invertebrados</span>
+                    </label>
                 </div>
-                <div id="fact-vertebrado" class="fact-box hidden">
-                    <p>Los vertebrados usan su columna vertebral para proteger
-                        la médula espinal, que controla movimientos y
-                        sensaciones.</p>
-                </div>
-                <div id="fact-invertebrado" class="fact-box hidden">
-                    <p>Los invertebrados representan más del 95 % de todas las
-                        especies animales del planeta.</p>
+                <div class="fact-panels">
+                    <div class="fact-box" data-group="vertebrado">
+                        <p>Los vertebrados usan su columna vertebral para
+                            proteger
+                            la médula espinal, que controla movimientos y
+                            sensaciones.</p>
+                    </div>
+                    <div class="fact-box" data-group="invertebrado">
+                        <p>Los invertebrados representan más del 95 % de todas
+                            las
+                            especies animales del planeta.</p>
+                    </div>
                 </div>
             </section>
         </main>
@@ -109,6 +121,5 @@
             <p>Proyecto escolar sobre animales vertebrados e invertebrados.</p>
         </footer>
 
-        <script src="script.js" defer></script>
     </body>
 </html>
