@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animales Invertebrados</title>
+        <link rel="stylesheet" href="style.css/practica.css">
+        <link rel="icon"
+            href="img/fearless-animal-logo-designs_11051791.png!sw800"
+            type="image/png">
+    </head>
+    <body>
+        <header>
+            <h1>Animales Invertebrados</h1>
+            <nav class="main-nav">
+                <a href="practica.html">Inicio</a>
+                <a href="pagina2.html">Vertebrados</a>
+                <a href="pagina3.html">Invertebrados</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>¿Qué es un invertebrado?</h2>
+                <figure>
+                    <img
+                        src="img/88b2fe8629f49598c7f4150a83cc645d.jpg"
+                        alt="Ejemplo de invertebrado" class="page-image">
+                    <figcaption>Ejemplo de invertebrado representado con un
+                        diseño de animal.</figcaption>
+                </figure>
+                <p>Los invertebrados son animales que no tienen columna
+                    vertebral. Este grupo es diverso e incluye insectos,
+                    moluscos, crustáceos, equinodermos y gusanos.</p>
+            </section>
+
+            <section class="details">
+                <h2>Tipos de invertebrados</h2>
+                <button onclick="toggleSection('invertebrate-groups')">Mostrar /
+                    Ocultar tipos</button>
+                <div id="invertebrate-groups" class="info-box hidden">
+                    <ul>
+                        <li><strong>Insectos:</strong> tienen seis patas y
+                            generalmente dos pares de alas.</li>
+                        <li><strong>Arácnidos:</strong> tienen ocho patas y
+                            viven en tierra.</li>
+                        <li><strong>Moluscos:</strong> tienen cuerpos blandos y
+                            muchas especies tienen concha.</li>
+                        <li><strong>Crustáceos:</strong> viven en agua y tienen
+                            caparazón duro.</li>
+                        <li><strong>Echinodermos:</strong> como estrellas de
+                            mar, se mueven con pequeños pies tubulares.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="comparison">
+                <h2>Comparación interna</h2>
+                <table>
+                    <thead>
+                        <tr><th>Función</th><th>Invertebrados</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Soporte</td><td>Exoesqueleto o cuerpo
+                                blando</td></tr>
+                        <tr><td>Protección</td><td>Caparazón, cutícula o piel
+                                protectora</td></tr>
+                        <tr><td>Movimiento</td><td>Se desplazan con patas,
+                                ventosas, músculos o contracciones</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="interactive">
+                <h2>Pequeña prueba</h2>
+                <p>Selecciona la respuesta correcta:</p>
+                <div class="button-grid">
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Correcto: la medusa es un invertebrado.')">Medusa</button>
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Incorrecto: el caballo es un vertebrado.')">Caballo</button>
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Correcto: el pulpo es un invertebrado.')">Pulpo</button>
+                </div>
+                <div id="quiz-result" class="quiz-result hidden"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Aprende más sobre invertebrados con esta página.</p>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

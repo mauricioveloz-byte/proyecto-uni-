@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animales Vertebrados</title>
+        <link rel="stylesheet" href="style.css/practica.css">
+        <link rel="icon"
+            href="img/fearless-animal-logo-designs_11051791.png!sw800"
+            type="image/png">
+    </head>
+    <body>
+        <header>
+            <h1>Animales Vertebrados</h1>
+            <nav class="main-nav">
+                <a href="practica.html">Inicio</a>
+                <a href="pagina2.html">Vertebrados</a>
+                <a href="pagina3.html">Invertebrados</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>¿Qué es un vertebrado?</h2>
+                <figure>
+                    <img id="vertebrados" src="img/fearless-animal-logo-designs_11051791.png!sw800" alt="Ejemplo de vertebrado" class="page-image">
+                    <figcaption>Ejemplo de vertebrado en su
+                        hábitat.</figcaption>
+                </figure>
+                <p>Los vertebrados son animales con columna vertebral. Entraron
+                    en cinco grupos principales: mamíferos, aves, reptiles,
+                    anfibios y peces.</p>
+            </section>
+
+            <section class="details">
+                <h2>Grupos de vertebrados</h2>
+                <button onclick="toggleSection('vertebrate-groups')">Mostrar /
+                    Ocultar grupos</button>
+                <div id="vertebrate-groups" class="info-box hidden">
+                    <ul>
+                        <li><strong>Mamíferos:</strong> tienen pelo y, en la
+                            mayoría de los casos, alimentan a sus crías con
+                            leche.</li>
+                        <li><strong>Aves:</strong> tienen plumas y la mayoría
+                            puede volar.</li>
+                        <li><strong>Reptiles:</strong> tienen escamas y son de
+                            sangre fría.</li>
+                        <li><strong>Anfibios:</strong> viven parte de su vida en
+                            el agua y parte en la tierra.</li>
+                        <li><strong>Peces:</strong> viven en el agua, respiran
+                            con branquias y suelen tener aletas.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="comparison">
+                <h2>Comparación interna</h2>
+                <table>
+                    <thead>
+                        <tr><th>Función</th><th>Vertebrados</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Soporte</td><td>Esqueleto interno con columna
+                                vertebral</td></tr>
+                        <tr><td>Protección</td><td>Costillas y cráneo protegen
+                                órganos</td></tr>
+                        <tr><td>Movimiento</td><td>Músculos unidos a
+                                huesos</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="interactive">
+                <h2>Pequeña prueba</h2>
+                <p>Selecciona la respuesta correcta:</p>
+                <div class="button-grid">
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Correcto: el tiburón es un vertebrado.')">Tiburón</button>
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Incorrecto: la mariposa es un invertebrado.')">Mariposa</button>
+                    <button
+                        onclick="showQuizResult('quiz-result', 'Correcto: el perro es un vertebrado.')">Perro</button>
+                </div>
+                <div id="quiz-result" class="quiz-result hidden"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Aprende más sobre vertebrados con esta página.</p>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

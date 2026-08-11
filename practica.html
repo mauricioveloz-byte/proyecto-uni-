@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animales Vertebrados e Invertebrados</title>
+        <link rel="stylesheet" href="style.css/practica.css">
+        <link rel="icon"
+            href="img/fearless-animal-logo-designs_11051791.png!sw800"
+            type="image/png">
+    </head>
+    <body>
+        <header>
+            <h1>Proyecto sobre animales vertebrados e invertebrados</h1>
+            <nav class="main-nav">
+                <a href="practica.html">Inicio</a>
+                <a href="pagina2.html">Vertebrados</a>
+                <a href="pagina3.html">Invertebrados</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>¿Qué son los animales vertebrados e invertebrados?</h2>
+                <p>Los animales <strong>vertebrados</strong> tienen columna
+                    vertebral y un sistema esquelético interno. Los animales
+                    <strong>invertebrados</strong> no tienen columna vertebral y
+                    pueden tener un exoesqueleto, una piel blanda o estructuras
+                    diferentes.</p>
+                <p>En este proyecto verás las características, ejemplos,
+                    comparaciones y una sección interactiva con datos
+                    interesantes.</p>
+                <button onclick="toggleSection('intro-examples')">Mostrar
+                    ejemplos rápidos</button>
+                <div id="intro-examples" class="info-box hidden">
+                    <h3>Ejemplos rápidos</h3>
+                    <ul>
+                        <li><strong>Vertebrados:</strong> mamíferos, aves,
+                            peces, anfibios y reptiles.</li>
+                        <li><strong>Invertebrados:</strong> insectos, aracnidos,
+                            moluscos, crustáceos y gusanos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="comparison">
+                <h2>Tabla comparativa</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Vertebrados</th>
+                            <th>Invertebrados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Columna vertebral</td>
+                            <td>Presente</td>
+                            <td>Ausente</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema circulatorio</td>
+                            <td>Cerrado</td>
+                            <td>Abierto o cerrado</td>
+                        </tr>
+                        <tr>
+                            <td>Cobertura corporal</td>
+                            <td>Piel, plumas, escamas o pelo</td>
+                            <td>Exoesqueleto, piel blanda o caparazón</td>
+                        </tr>
+                        <tr>
+                            <td>Tamaño</td>
+                            <td>Pequeño a muy grande</td>
+                            <td>Muy pequeño a mediano</td>
+                        </tr>
+                        <tr>
+                            <td>Ejemplos</td>
+                            <td>León, águila, tiburón</td>
+                            <td>Mariposa, pulpo, caracol</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="interactive">
+                <h2>Sección interactiva</h2>
+                <p>Elige un botón para leer un dato interesante sobre cada
+                    grupo.</p>
+                <div class="button-grid">
+                    <button onclick="showFact('fact-vertebrado')">Dato sobre
+                        vertebrados</button>
+                    <button onclick="showFact('fact-invertebrado')">Dato sobre
+                        invertebrados</button>
+                </div>
+                <div id="fact-vertebrado" class="fact-box hidden">
+                    <p>Los vertebrados usan su columna vertebral para proteger
+                        la médula espinal, que controla movimientos y
+                        sensaciones.</p>
+                </div>
+                <div id="fact-invertebrado" class="fact-box hidden">
+                    <p>Los invertebrados representan más del 95 % de todas las
+                        especies animales del planeta.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Proyecto escolar sobre animales vertebrados e invertebrados.</p>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
