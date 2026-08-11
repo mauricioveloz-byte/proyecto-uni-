@@ -36,22 +36,25 @@
 
             <section class="details">
                 <h2>Tipos de invertebrados</h2>
-                <button onclick="toggleSection('invertebrate-groups')">Mostrar /
-                    Ocultar tipos</button>
-                <div id="invertebrate-groups" class="info-box hidden">
-                    <ul>
-                        <li><strong>Insectos:</strong> tienen seis patas y
-                            generalmente dos pares de alas.</li>
-                        <li><strong>Arácnidos:</strong> tienen ocho patas y
-                            viven en tierra.</li>
-                        <li><strong>Moluscos:</strong> tienen cuerpos blandos y
-                            muchas especies tienen concha.</li>
-                        <li><strong>Crustáceos:</strong> viven en agua y tienen
-                            caparazón duro.</li>
-                        <li><strong>Echinodermos:</strong> como estrellas de
-                            mar, se mueven con pequeños pies tubulares.</li>
-                    </ul>
-                </div>
+                <details class="details-toggle">
+                    <summary>Mostrar / Ocultar tipos</summary>
+                    <div class="info-box">
+                        <ul>
+                            <li><strong>Insectos:</strong> tienen seis patas y
+                                generalmente dos pares de alas.</li>
+                            <li><strong>Arácnidos:</strong> tienen ocho patas y
+                                viven en tierra.</li>
+                            <li><strong>Moluscos:</strong> tienen cuerpos
+                                blandos y
+                                muchas especies tienen concha.</li>
+                            <li><strong>Crustáceos:</strong> viven en agua y
+                                tienen
+                                caparazón duro.</li>
+                            <li><strong>Echinodermos:</strong> como estrellas de
+                                mar, se mueven con pequeños pies tubulares.</li>
+                        </ul>
+                    </div>
+                </details>
             </section>
 
             <section class="comparison">
@@ -74,15 +77,29 @@
             <section class="interactive">
                 <h2>Pequeña prueba</h2>
                 <p>Selecciona la respuesta correcta:</p>
-                <div class="button-grid">
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Correcto: la medusa es un invertebrado.')">Medusa</button>
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Incorrecto: el caballo es un vertebrado.')">Caballo</button>
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Correcto: el pulpo es un invertebrado.')">Pulpo</button>
+                <div class="button-grid quiz-selector">
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-invertebrate"
+                            class="choice-input" value="correct">
+                        <span>Medusa</span>
+                    </label>
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-invertebrate"
+                            class="choice-input" value="wrong">
+                        <span>Caballo</span>
+                    </label>
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-invertebrate"
+                            class="choice-input" value="correct">
+                        <span>Pulpo</span>
+                    </label>
                 </div>
-                <div id="quiz-result" class="quiz-result hidden"></div>
+                <div class="quiz-result">
+                    <p class="feedback feedback-correct">Correcto: la medusa es
+                        un invertebrado.</p>
+                    <p class="feedback feedback-wrong">Incorrecto: el caballo es
+                        un vertebrado.</p>
+                </div>
             </section>
         </main>
 
@@ -90,6 +107,5 @@
             <p>Aprende más sobre invertebrados con esta página.</p>
         </footer>
 
-        <script src="script.js" defer></script>
     </body>
 </html>
