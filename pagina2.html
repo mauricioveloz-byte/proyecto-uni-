@@ -23,7 +23,9 @@
             <section>
                 <h2>¿Qué es un vertebrado?</h2>
                 <figure>
-                    <img id="vertebrados" src="img/fearless-animal-logo-designs_11051791.png!sw800" alt="Ejemplo de vertebrado" class="page-image">
+                    <img id="vertebrados"
+                        src="img/fearless-animal-logo-designs_11051791.png!sw800"
+                        alt="Ejemplo de vertebrado" class="page-image">
                     <figcaption>Ejemplo de vertebrado en su
                         hábitat.</figcaption>
                 </figure>
@@ -34,23 +36,24 @@
 
             <section class="details">
                 <h2>Grupos de vertebrados</h2>
-                <button onclick="toggleSection('vertebrate-groups')">Mostrar /
-                    Ocultar grupos</button>
-                <div id="vertebrate-groups" class="info-box hidden">
-                    <ul>
-                        <li><strong>Mamíferos:</strong> tienen pelo y, en la
-                            mayoría de los casos, alimentan a sus crías con
-                            leche.</li>
-                        <li><strong>Aves:</strong> tienen plumas y la mayoría
-                            puede volar.</li>
-                        <li><strong>Reptiles:</strong> tienen escamas y son de
-                            sangre fría.</li>
-                        <li><strong>Anfibios:</strong> viven parte de su vida en
-                            el agua y parte en la tierra.</li>
-                        <li><strong>Peces:</strong> viven en el agua, respiran
-                            con branquias y suelen tener aletas.</li>
-                    </ul>
-                </div>
+                <details class="details-toggle">
+                    <summary>Mostrar / Ocultar grupos</summary>
+                    <div class="info-box">
+                        <ul>
+                            <li><strong>Mamíferos:</strong> tienen pelo y, en la
+                                mayoría de los casos, alimentan a sus crías con
+                                leche.</li>
+                            <li><strong>Aves:</strong> tienen plumas y la mayoría
+                                puede volar.</li>
+                            <li><strong>Reptiles:</strong> tienen escamas y son de
+                                sangre fría.</li>
+                            <li><strong>Anfibios:</strong> viven parte de su vida en
+                                el agua y parte en la tierra.</li>
+                            <li><strong>Peces:</strong> viven en el agua, respiran
+                                con branquias y suelen tener aletas.</li>
+                        </ul>
+                    </div>
+                </details>
             </section>
 
             <section class="comparison">
@@ -73,15 +76,24 @@
             <section class="interactive">
                 <h2>Pequeña prueba</h2>
                 <p>Selecciona la respuesta correcta:</p>
-                <div class="button-grid">
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Correcto: el tiburón es un vertebrado.')">Tiburón</button>
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Incorrecto: la mariposa es un invertebrado.')">Mariposa</button>
-                    <button
-                        onclick="showQuizResult('quiz-result', 'Correcto: el perro es un vertebrado.')">Perro</button>
+                <div class="button-grid quiz-selector">
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-vertebrate" class="choice-input" value="correct">
+                        <span>Tiburón</span>
+                    </label>
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-vertebrate" class="choice-input" value="wrong">
+                        <span>Mariposa</span>
+                    </label>
+                    <label class="choice-button">
+                        <input type="radio" name="quiz-vertebrate" class="choice-input" value="correct">
+                        <span>Perro</span>
+                    </label>
                 </div>
-                <div id="quiz-result" class="quiz-result hidden"></div>
+                <div class="quiz-result">
+                    <p class="feedback feedback-correct">Correcto: el tiburón es un vertebrado.</p>
+                    <p class="feedback feedback-wrong">Incorrecto: la mariposa es un invertebrado.</p>
+                </div>
             </section>
         </main>
 
@@ -89,6 +101,6 @@
             <p>Aprende más sobre vertebrados con esta página.</p>
         </footer>
 
-        <script src="script.js" defer></script>
+
     </body>
 </html>
